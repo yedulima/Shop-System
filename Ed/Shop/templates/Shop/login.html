@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Shop/add.css' %}">
+    <title>Shop</title>
+</head>
+<body>
+    {% include 'Shop/navbar.html' %}
+    <div class="login_singup">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <hr>
+            {{ Forms }}
+            <button type="submit">Mandar</button>
+            <p>Don't have an account? <a href="{% url 'singup' %}">Sing Up</a></p>
+        </form>
+    </div>
+</body>
+</html>
