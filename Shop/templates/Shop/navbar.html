@@ -1,0 +1,13 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/Shop/navbar.css' %}">
+</head>
+
+<nav class="nav-list">
+    <h2>Central GOAL</h2>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'login' %}">Login/Sing up</a></li>
+    </ul>
+</nav>
